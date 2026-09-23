@@ -1,4 +1,4 @@
-"""Automated tests. Run with:  python3 tests.py   (or python3 -m unittest tests)"""
+"""Automated tests. Run with:  python3 tests.py"""
 
 import unittest
 

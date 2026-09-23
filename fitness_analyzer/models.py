@@ -4,16 +4,11 @@ from .calculations import check_range, is_number, summarize
 
 
 class Participant:
-    """A person wearing the device, together with personal reference values.
+    """A person wearing the device, together with personal reference values."""
 
-    The reference (baseline) values are stored in protected attributes and
-    can only be changed through validating property setters, so a Participant
-    can never hold an impossible baseline.
-    """
-
-    HEART_RATE_LIMITS = (30, 120)      # plausible resting heart rate, bpm
-    SKIN_RESPONSE_LIMITS = (0.0, 50.0)  # simulated units
-    TEMPERATURE_LIMITS = (25.0, 42.0)   # skin temperature, degrees C
+    HEART_RATE_LIMITS = (30, 120)
+    SKIN_RESPONSE_LIMITS = (0.0, 50.0)
+    TEMPERATURE_LIMITS = (25.0, 42.0)
 
     def __init__(self, participant_id, baseline_heart_rate,
                  baseline_skin_response, baseline_temperature):
@@ -211,11 +206,7 @@ class Observation:
 
 
 class Session:
-    """A training session: one Participant plus an ordered list of Observations.
-
-    This is the main example of composition: a Session *has a* Participant and
-    *has* Observations, and delegates validation to the Observation objects.
-    """
+    """A training session: one Participant plus an ordered list of Observations."""
 
     def __init__(self, session_id, participant, observations=None):
         if not isinstance(participant, Participant):

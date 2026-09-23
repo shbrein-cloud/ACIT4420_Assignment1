@@ -11,9 +11,9 @@ from .rules import (ClassificationRule, HighActivityRule, InsufficientDataRule,
 class SessionAnalyzer:
     """Analyzes sessions using an ordered list of ClassificationRule objects.
 
-    The analyzer *has* rules (composition). Rules are tried in order and the
+    The analyzer has rules. Rules are tried in order and the
     first one that matches decides the label, so the order expresses priority:
-    data quality first, then the time pattern (recovery), then overall
+    data quality first, then the time pattern, then overall
     intensity from highest to lowest.
     """
 

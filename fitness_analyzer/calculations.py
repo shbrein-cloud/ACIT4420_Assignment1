@@ -22,7 +22,7 @@ def check_range(name, value, lower, upper):
     """Validate one measurement.
 
     Returns ``None`` when the value is acceptable, otherwise a short text
-    describing the problem. Returning a message (instead of raising) lets the
+    describing the problem. Returning a message lets the
     caller collect every problem in an observation, not just the first one.
     """
     if value is None:
@@ -66,10 +66,7 @@ def compare_with_reference(value, reference):
 
 def linear_slope(x_values, y_values):
     """Least-squares slope of y against x (change of y per time step).
-
-    Returns 0.0 when a slope cannot be calculated (fewer than two points or
-    all x values identical).
-    """
+    Returns 0.0 when a slope cannot be calculated"""
     if len(x_values) != len(y_values):
         raise ValueError("x_values and y_values must have the same length")
     if len(x_values) < 2:

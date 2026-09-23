@@ -4,13 +4,7 @@ Each rule is a small class that answers two questions about the session
 evidence (a dictionary produced by SessionAnalyzer):
 
 * ``matches(evidence)`` - does this label describe the session?
-* ``explain(evidence)`` - why (in plain language)?
-
-All rules share the same interface through the ClassificationRule base class
-and override these two methods. The analyzer only talks to the base-class
-interface, so adding a new label means adding a new subclass - the analyzer
-itself does not change.
-"""
+* ``explain(evidence)`` - why (in plain language)?"""
 
 from .calculations import format_value
 
